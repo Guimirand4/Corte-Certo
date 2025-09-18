@@ -5,7 +5,6 @@ import { Search } from "lucide-react"
 import Image from "next/image"
 import { db } from "./_lib/prisma"
 import BarbershopItem from "@/components/barbershop-item"
-import Footer from "@/components/footer"
 import { quickSearchOptions } from "./_constants/search"
 import BookingItem from "@/components/booking-item"
 
@@ -72,9 +71,6 @@ const Home = async () => {
           ))}
         </div>
       </div>
-      <footer className="mt-10">
-        <Footer />
-      </footer>
     </div>
   )
 }
