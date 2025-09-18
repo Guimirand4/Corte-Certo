@@ -1,7 +1,9 @@
 import { db } from "@/app/_lib/prisma"
 import PhoneItem from "@/components/phone-item"
 import ServiceItem from "@/components/service-item"
+import SidebarButton from "@/components/sidebar-button"
 import { Button } from "@/components/ui/button"
+import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -49,13 +51,19 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
           </Link>
         </Button>
 
-        <Button
-          size={"icon"}
-          variant={"secondary"}
-          className="absolute right-4 top-4"
-        >
-          <MenuIcon />
-        </Button>
+        <Sheet>
+          {/* Conteúdo do menu deslizante */}
+          <SheetTrigger asChild>
+            <Button
+              size="icon"
+              variant="outline"
+              className="absolute right-4 top-4"
+            >
+              <MenuIcon />
+            </Button>
+          </SheetTrigger>
+          <SidebarButton />
+        </Sheet>
       </div>
 
       {/* TITULO */}
