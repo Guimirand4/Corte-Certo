@@ -9,8 +9,7 @@ import {
   SheetTitle,
 } from "./ui/sheet"
 import { quickSearchOptions } from "@/app/_constants/search"
-import { Avatar } from "./ui/avatar"
-import { AvatarImage } from "@radix-ui/react-avatar"
+import { Avatar, AvatarImage } from "./ui/avatar"
 import Link from "next/link"
 
 const SidebarButton = () => {
