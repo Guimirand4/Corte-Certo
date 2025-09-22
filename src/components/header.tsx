@@ -5,17 +5,20 @@ import Image from "next/image"
 import { Sheet, SheetTrigger } from "./ui/sheet"
 
 import SidebarButton from "./sidebar-button"
+import Link from "next/link"
 
 const Header = () => {
   return (
     <Card>
       <CardContent className="flex flex-row items-center justify-between p-5">
-        <Image
-          src="/logosemfundo.png"
-          alt="Corte Certo"
-          width={150}
-          height={50}
-        />
+        <Link href="/">
+          <Image
+            src="/logosemfundo.png"
+            alt="Corte Certo"
+            width={150}
+            height={50}
+          />
+        </Link>
 
         <Sheet>
           {/* Conteúdo do menu deslizante */}
