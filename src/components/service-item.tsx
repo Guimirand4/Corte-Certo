@@ -13,7 +13,7 @@ import {
   SheetTitle,
 } from "./ui/sheet"
 import { Calendar } from "./ui/calendar"
-import { ptBR, se } from "react-day-picker/locale"
+import { ptBR } from "react-day-picker/locale"
 import { DayPicker } from "react-day-picker"
 import { useEffect, useState } from "react"
 import { format, set } from "date-fns"
