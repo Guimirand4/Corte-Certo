@@ -51,7 +51,7 @@ const Home = async () => {
         </h2>
         <p>
           {format(new Date(), "EEEE, dd 'de' MMMM", { locale: ptBR }).replace(
-            /^\p{L}/u,
+            /^[a-zA-Z]/,
             (c) => c.toUpperCase(),
           )}
         </p>
