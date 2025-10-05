@@ -13,7 +13,7 @@ const Header = () => {
       <CardContent className="flex flex-row items-center justify-between p-5">
         <Link href="/">
           <Image
-            src="/logosemfundo.png"
+            src="/logosemfund.png"
             alt="Corte Certo"
             width={150}
             height={50}
