@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💈 Corte Certo
 
-## Getting Started
+Um site moderno e intuitivo para **agendamento de serviços em barbearias**, desenvolvido com foco em **experiência do usuário e design mobile first**.  
+Com o **Corte Certo**, o cliente pode agendar cortes de cabelo, barba, sobrancelha e muito mais, de forma prática e rápida.  
 
-First, run the development server:
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- ⚛️ **React** — Interface moderna e reativa  
+- 🧠 **NestJS** — API robusta e escalável no backend  
+- 🎨 **Tailwind CSS** — Estilização rápida e responsiva  
+- 🗄️ **PostgreSQL (Neon DB)** — Banco de dados em nuvem  
+- 💾 **Prisma ORM** — Mapeamento de dados eficiente  
+- 🔐 **Login com Google** — Autenticação prática e segura  
+- 📱 **Mobile First Design** — Foco total na experiência mobile  
+
+---
+
+## ✂️ Funcionalidades
+
+- 🔍 **Buscar barbearias** próximas  
+- 🗓️ **Agendar serviços** como corte de cabelo, barba e sobrancelha  
+- 💰 **Ver valores e detalhes** dos serviços  
+- ❌ **Cancelar agendamentos** com facilidade  
+- 👤 **Login com conta Google**  
+- 📲 **Interface totalmente responsiva**  
+
+---
+
+## 🧭 Conceito
+
+O **Corte Certo** nasceu com o objetivo de **modernizar o agendamento em barbearias**, oferecendo uma experiência fluida tanto para o cliente quanto para o barbeiro.  
+Com um **design mobile first**, o sistema se adapta perfeitamente a qualquer dispositivo, mantendo desempenho e usabilidade impecáveis.  
+
+---
+
+## 🧑‍💻 Stack Técnica
+
+| Camada | Tecnologia |
+|:-------|:------------|
+| Frontend | React + TypeScript + Tailwind |
+| Backend | NestJS + Prisma |
+| Banco de Dados | PostgreSQL (Neon DB) |
+| Deploy | Vercel (Frontend) + Neon (Banco de Dados) |
+| Autenticação | Google OAuth |
+
+---
+
+## ⚙️ Como Rodar o Projeto
+
+### 🔧 Pré-requisitos
+Antes de começar, certifique-se de ter instalado:
+- **Node.js** (versão 18 ou superior)
+- **npm**, **yarn** ou **pnpm**
+- **PostgreSQL** (ou conexão com o **Neon DB**)
+- **Conta no Google Cloud Console** (para o login OAuth)
+
+---
+
+### 🧩 Configuração do Frontend (React)
 
 ```bash
+# Clone o repositório
+git clone https://github.com/guilhermemiranda419/corte-certo.git
+
+# Acesse a pasta do projeto
+cd corte-certo
+
+# Instale as dependências
+npm install
+# ou
+yarn install
+# ou
+pnpm install
+
+# Configure as variáveis de ambiente
+crie um arquivo `.env.local` na raiz com:
+NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXTAUTH_SECRET=sua_chave_secreta
+GOOGLE_CLIENT_ID=sua_google_client_id
+GOOGLE_CLIENT_SECRET=sua_google_client_secret
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
