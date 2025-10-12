@@ -3,6 +3,7 @@ import { db } from "../_lib/prisma"
 import { getServerSession } from "next-auth"
 import { authOptions } from "../_lib/auth"
 import BookingItem from "@/components/booking-item"
+import { getConfirmedBookings } from "../_data/get-confirmed-bookings"
 
 const Bookings = async () => {
   const session = await getServerSession(authOptions)
@@ -11,24 +12,7 @@ const Bookings = async () => {
       <div className="p-5">Acesse sua conta para ver seus agendamentos</div>
     )
   }
-  const confirmedBookings = await db.booking.findMany({
-    where: {
-      userId: (session.user as any).id,
-      date: {
-        gte: new Date(),
-      },
-    },
-    include: {
-      service: {
-        include: {
-          barbershop: true,
-        },
-      },
-    },
-    orderBy: {
-      date: "asc",
-    },
-  })
+  const confirmedBookings = await getConfirmedBookings()
   const concludedBookings = await db.booking.findMany({
     where: {
       userId: (session.user as any).id,
