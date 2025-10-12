@@ -15,7 +15,7 @@ import {
 import { Calendar } from "./ui/calendar"
 import { ptBR } from "react-day-picker/locale"
 import { DayPicker } from "react-day-picker"
-import { useEffect, useMemo, useState } from "react"
+import { use, useEffect, useMemo, useState } from "react"
 import { set, isPast, isToday } from "date-fns"
 import { createBooking } from "@/app/_actions/create-booking"
 import { useSession } from "next-auth/react"
@@ -25,6 +25,7 @@ import { getBookings } from "@/app/_actions/get-booking"
 import SignInDialog from "./sign-in-dialog"
 import { Dialog, DialogContent } from "./ui/dialog"
 import BookingSummary from "./booking-summary"
+import { useRouter } from "next/navigation"
 ;<DayPicker locale={ptBR} />
 
 interface ServiceItemProps {
@@ -89,6 +90,7 @@ const getTimeList = ({ bookings, selectedDay }: GetTimeListProps) => {
 const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
   const [signinDialogIsOpen, setSignInDialogIsOpen] = useState(false)
   const { data } = useSession()
+  const router = useRouter()
   const [selectedDay, setselectedDay] = useState<Date | undefined>(undefined)
   const [selectedTime, setSelectedTime] = useState<string | undefined>(
     undefined,
@@ -147,7 +149,12 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
         date: selectedDate,
       })
       handleBookingSheetOpenChange()
-      toast.success("Reserva criada com sucesso")
+      toast.success("Reserva criada com sucesso", {
+        action: {
+          label: "Ver agendamentos",
+          onClick: () => router.push("/bookings"),
+        },
+      })
     } catch (error) {
       console.log(error)
       toast.error("Erro ao criar reserva")
