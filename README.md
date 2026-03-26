@@ -8,7 +8,7 @@ Com o **Corte Certo**, o cliente pode agendar cortes de cabelo, barba, sobrancel
 ## 🚀 Tecnologias Utilizadas
 
 - ⚛️ **React** — Interface moderna e reativa  
-- 🧠 **NestJS** — API robusta e escalável no backend  
+- 🧠 **NextJS** — API robusta e escalável no backend  
 - 🎨 **Tailwind CSS** — Estilização rápida e responsiva  
 - 🗄️ **PostgreSQL (Neon DB)** — Banco de dados em nuvem  
 - 💾 **Prisma ORM** — Mapeamento de dados eficiente  
