@@ -40,7 +40,7 @@ Com um **design mobile first**, o sistema se adapta perfeitamente a qualquer dis
 | Camada | Tecnologia |
 |:-------|:------------|
 | Frontend | React + TypeScript + Tailwind |
-| Backend | NestJS + Prisma |
+| Backend | NextJS + Prisma |
 | Banco de Dados | PostgreSQL (Neon DB) |
 | Deploy | Vercel (Frontend) + Neon (Banco de Dados) |
 | Autenticação | Google OAuth |
